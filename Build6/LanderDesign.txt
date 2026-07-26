@@ -1,0 +1,51 @@
+A design for a simulated rocket landing. 
+Simulation uses Euler's Method to predict next steps. 
+Lander starts at 3000 metres high, and hopes to land gently by use of a controller.
+
+**** Main Script *****
+0. Clear workspace etc for new run
+
+1. Initialise the values.
+
+   1.1 Set the Model Parameters.
+
+   1.2 Initialise vectors to store the data to plot.
+
+2. Repeat for each time step while the lander is above the ground.
+
+   2.1 Store the data to plot later.
+
+        2.1.1 Calculate target velocity based on current height
+
+   2.2 Get the thrust and target velocity from the controller, following a descent plan.
+
+        2.2.1 Get a target velocity for current time step from Descent Planner.
+
+        2.2.2 Find the thrust, based on this target velocity.
+            thrust = gain*state.err + m*state.g
+
+   2.3 Run the simulator to predict what will happen over the next time step.
+
+      2.3.1 Calculate the acceleration.
+
+          2.3.1.1 If fuelmass>0, calculate the fuel mass, making sure it can't be negative.
+
+          2.3.1.2 Calculate the total mass.
+
+          2.3.1.3 Decide whether or not to ignore thrust by checking if there is fuel left.
+            if fuelmass<=0: thrust=0
+
+          2.3.1.4 Calculate drag force.
+            D = state.d*state.v*abs(state.v)
+
+          2.3.1.5 Calculate the force.
+
+          2.3.1.6 Use Newton's second law to calculate the acceleration.
+
+      2.3.2 Use Euler's method to find the position at the next step.
+
+      2.3.3 Use Euler's method to find the velocity at the next step.
+
+      2.3.4 Increase the time by dt.
+
+3. Plot the data.

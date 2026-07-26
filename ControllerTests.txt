@@ -1,0 +1,54 @@
+Test: Set gain to 1000 and 122, compare what happens
+
+Criteria results:
+When gain=1000, all 3 tests were failed
+When gain=122, all 3 tests were passed
+
+
+
+Test: testing for robustness by changing the initial height and velocity,
+this should show us that a constant target velocity won't work
+
+We see that by changing these parameters, having a constant target velocity 
+means that too much fuel is used at the start, when it's ok to go faster
+which uses less fuel. It also means that if the initial height is
+decreased, the rocket won't slow down early enough to stop it from
+crashing. In summary, one constant velocity won't be able to fit all
+situations, so the target velocity has to be a function of height.
+
+
+
+
+Test 5a: set gain=1000 and intercept=0m/s
+
+Between 40 and 120 seconds, both the velocity and height are asymptotically
+approaching 0 until the fuel runs out.
+
+
+Test 5b: try intercept = -1 and -2 m/s
+
+If the target is -2, the velcity will asymptotically approach -2 but never
+reach it, so the landing velocity will be greater than -2m/s. But setting
+the intercept to -1m/s is perfect and all 3 tests are passed.
+
+
+Test 5c: set the height and initial velcity to [2900, 310] and
+[3100, -290], they should both pass all 3 criteria to show the robustness
+of the controller.
+
+All 3 criteria are passed in both of the extreme cases.
+
+
+
+Test 6: robustness test on build 8 with the improved piecewise function
+
+It passed the test with all combinations of values.
+
+I chose those values because they put the astronauts in very little
+discomfort (low max acceleration) while saving lots of fuel and landing
+safely (between 0 and -2m/s). I thought it was the most optimal compromise
+between these criteria (especially the fuel).
+
+
+
+

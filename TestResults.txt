@@ -1,0 +1,126 @@
+Landing Simulator Version 1 (run lander.m)
+
+Test 1a: Set Thrust to 0N, compare numerical with SUVAT results, should match.
+
+Calculated Values From Graph (when rocket lands)
+v = -385m/s       v = -386m/s
+t = 8.76s         t = 8.8s
+
+Analytical values match with values from graph. Behaviour is as expected: with no thrust
+the rocket falls from the sky and quickly crashes within 9 seconds.
+
+
+
+Test 1b: Set Thrust equal to weight, forces should balance,
+so acceleration should always equal 0m/s^2.
+
+Initially, acceleration is equal to -9.81m/s^2 because the initial acceleration
+is calculated before the initial thrust. After that, acceleration is always
+equal to 0m/s^2.
+
+Behaviour is as expected: with thrust equal to weight, there is no resultant
+force, so the rocket falls with constant velocity and no acceleration.
+
+
+
+Test 1c: Set Thrust to slightly more than or less than weight, observe how this
+affects acceleration and the time the lander hits the ground, compare this with
+SUVAT results, should match.
+
+Calculated Values From Graph (when rocket lands, thrust=0.5*weight)
+a = -4.91m/s^2    a = -4.91m/s^2
+t = 9.29s         t = 9.30s
+
+Analytical values match with values from graph. Behaviour is as expected: with thrust
+less than weight, the rocket falls from the sky and quickly crashes.
+
+
+
+Test 2a: Set Thrust to 50000N, check if fuel burns at the expected rate, should
+match analytical calculations.
+
+Calculated Value for when fuel runs out: 30s
+From Graph: 30s
+
+Analytical value matches with value from graph. Behaviour is as expected, fuel
+burns at a constant rate and thrust becomes 0 when all fuel is burnt.
+
+
+
+Test 2b: Check graph to see if fuel mass ever goes negative, it should decrease
+as fuel is burnt and stay at 0.
+
+The minimum point on the fuel mass-time graph is 0kg, before this point the
+fuel decreases linearly, and after this point it remains constant at 0.
+
+This matches the expected results.
+
+
+
+Test 2c: Set thrust to -50000N and check if the simulator behaves correctly,
+a negative thrust shouldn't change how the fuel mass varies, but it should affect
+the acceleration, velocity and height graphs.
+
+The fuel mass graph stays the same, but the rocket reaches the ground quicker,
+this makes sense since the thrust if pushing the rocket downwards towards the
+ground, so the results match the expectation.
+
+
+
+Test 2d: Make sure the physics makes sense by comparing total energy at the top
+(potential) with total energy when it reaches the ground (kinetic).
+
+GPE at peak height = 182 MJ
+KE when it reaches the ground = 182 MJ
+
+This matches expectations since the total energy at the peak height and at
+the point where it lands are equal.
+
+
+
+Test 3a: Use the graph to work out the time when the rocket reaches its maximum
+height and explain the velocity and acceleration values at this time. I'm
+that the maximum height will be reach shortly after when the fuel runs out,
+the velocity will be 0 at this time, and the acceleration will be negative.
+
+Time: 45.1s (fuel runs out at 30s)
+Velocity: -0.625 m/s
+Acceleration: -9.81 m/s^2
+
+All 3 values match expectations. The fact that acceleration=g also makes
+sense because since velocity is approximately 0, the drag is also 0, and
+thrust is also 0 because the fuel has run out, so the only force acting on
+the rocket is gravity.
+
+
+
+Test 3b: Compare the simulation behaviour (both acceleration and velocity)
+long after fuel runs out with analytical solutions, should match.
+
+Analytical terminal velocity: -121 m/s
+The graph approaches -121 m/s as time increases, which matches the
+expectations.
+
+Acceleration approaches 0 m/s^2 as expected.
+
+The acceleration suddenly changes when fuel runs out because the thrust
+goes from 50000N to 0, which means that the total force acting on the
+rocket decreases by 50000N, and acceleration is proportional to force
+(assuming constant mass, which is fair to assume at the point where fuel
+mass reaches 0).
+
+
+
+Test 4: Set the thrust to be proportional to the error (difference between
+velocity and target velocity) plus a constant value equal to the weight of
+the rocket so the thrust cancels out the weight. This should cause the
+rocket to stop its descent and stay still until the fuel runs out, then it
+drop to the ground and crash.
+The observations fit these expectations.
+
+
+
+
+
+
+
