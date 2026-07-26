@@ -31,11 +31,7 @@ The initial implementation of the rocket dynamics.
 * Constant engine thrust
 * Basic Euler integration
 
-Run:
-
-```matlab
-RunLander.m
-```
+Run: Lander.m
 
 ---
 
@@ -47,11 +43,7 @@ Introduces fuel consumption.
 * Constant thrust
 * Updated equations of motion
 
-Run:
-
-```matlab
-RunLander.m
-```
+Run: Lander.m
 
 ---
 
@@ -63,11 +55,7 @@ Adds atmospheric effects.
 * Constant thrust
 * Velocity-dependent drag
 
-Run:
-
-```matlab
-RunLander.m
-```
+Run: Lander.m
 
 ---
 
@@ -79,11 +67,7 @@ Introduces autonomous control.
 * Target vertical velocity set to **0 m/s**
 * Automatic thrust adjustment
 
-Run:
-
-```matlab
-RunLander.m
-```
+Run: Lander.m
 
 ---
 
@@ -95,11 +79,7 @@ Enhances the simulation output.
 * Clearer trajectory visualization
 * Better presentation of simulation data
 
-Run:
-
-```matlab
-RunLander.m
-```
+Run: Lander.m
 
 ---
 
@@ -111,11 +91,7 @@ Replaces the constant velocity target with a linear descent profile.
 * Smoother landing behaviour
 * Improved controller performance
 
-Run:
-
-```matlab
-RunLander.m
-```
+Run: Lander.m
 
 ---
 
@@ -127,11 +103,7 @@ Introduces a more realistic descent profile.
 * Improved landing strategy
 * Better touchdown characteristics
 
-Run:
-
-```matlab
-RunLander.m
-```
+Run: Lander.m
 
 ---
 
@@ -143,11 +115,7 @@ Automates testing of multiple descent profiles.
 * Performance comparison
 * Parameter investigation
 
-Run:
-
-```matlab
-PWTest.m
-```
+Run: PWTest.m
 
 ---
 
