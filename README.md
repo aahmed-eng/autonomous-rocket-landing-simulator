@@ -2,20 +2,7 @@
 
 A MATLAB-based simulation of a vertically landing rocket that progressively develops from a simple physics model into an autonomous closed-loop landing system.
 
-This project demonstrates the step-by-step implementation of rocket dynamics using **Euler's Method**, gradually introducing more realistic physics and control algorithms, including variable mass, aerodynamic drag, and autonomous thrust control for precision landing.
-
----
-
-## Features
-
-* Numerical integration using Euler's Method
-* Variable rocket mass due to fuel consumption
-* Configurable thrust model
-* Aerodynamic drag simulation
-* Autonomous landing controller
-* Multiple target velocity profiles
-* Automated testing of landing strategies
-* Progressive development through multiple builds
+This project demonstrates the step-by-step implementation of rocket dynamics using **Euler's Method**, gradually introducing more realistic physics and control algorithms.
 
 ---
 
@@ -23,7 +10,7 @@ This project demonstrates the step-by-step implementation of rocket dynamics usi
 
 The simulator is organized into a series of development builds. Each build introduces a new concept while maintaining the previous functionality, allowing the evolution of the landing algorithm to be followed from a basic physics simulation to an autonomous landing system.
 
-### Build 1 — Constant Mass, Constant Thrust
+### Build 1 - Constant Mass, Constant Thrust
 
 The initial implementation of the rocket dynamics.
 
@@ -31,11 +18,11 @@ The initial implementation of the rocket dynamics.
 * Constant engine thrust
 * Basic Euler integration
 
-Run: Lander.m
+Run: `Lander.m`
 
 ---
 
-### Build 2 — Variable Mass
+### Build 2 - Variable Mass
 
 Introduces fuel consumption.
 
@@ -43,11 +30,11 @@ Introduces fuel consumption.
 * Constant thrust
 * Updated equations of motion
 
-Run: Lander.m
+Run: `Lander.m`
 
 ---
 
-### Build 3 — Aerodynamic Drag
+### Build 3 - Aerodynamic Drag
 
 Adds atmospheric effects.
 
@@ -55,11 +42,11 @@ Adds atmospheric effects.
 * Constant thrust
 * Velocity-dependent drag
 
-Run: Lander.m
+Run: `Lander.m`
 
 ---
 
-### Build 4 — Closed-Loop Controller
+### Build 4 - Closed-Loop Controller
 
 Introduces autonomous control.
 
@@ -67,11 +54,11 @@ Introduces autonomous control.
 * Target vertical velocity set to **0 m/s**
 * Automatic thrust adjustment
 
-Run: Lander.m
+Run: `Lander.m`
 
 ---
 
-### Build 5 — Improved Visualization
+### Build 5 - Improved Visualization
 
 Enhances the simulation output.
 
@@ -79,11 +66,11 @@ Enhances the simulation output.
 * Clearer trajectory visualization
 * Better presentation of simulation data
 
-Run: Lander.m
+Run: `Lander.m`
 
 ---
 
-### Build 6 — Linear Target Velocity
+### Build 6 - Linear Target Velocity
 
 Replaces the constant velocity target with a linear descent profile.
 
@@ -91,11 +78,11 @@ Replaces the constant velocity target with a linear descent profile.
 * Smoother landing behaviour
 * Improved controller performance
 
-Run: Lander.m
+Run: `Lander.m`
 
 ---
 
-### Build 7 — Piecewise Linear Target Velocity
+### Build 7 - Piecewise Linear Target Velocity
 
 Introduces a more realistic descent profile.
 
@@ -103,11 +90,11 @@ Introduces a more realistic descent profile.
 * Improved landing strategy
 * Better touchdown characteristics
 
-Run: Lander.m
+Run: `Lander.m`
 
 ---
 
-### Build 8 — Automated Investigation
+### Build 8 - Automated Investigation
 
 Automates testing of multiple descent profiles.
 
@@ -115,14 +102,10 @@ Automates testing of multiple descent profiles.
 * Performance comparison
 * Parameter investigation
 
-Run: PWTest.m
+Run: `PWTest.m`
 
 ---
 
 # Author
 
 **Ameen Ahmed**
-
-Developed as a numerical simulation project exploring rocket dynamics, guidance, and autonomous landing control using MATLAB.
-
----
